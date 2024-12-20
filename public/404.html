@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>404 - Page Not Found</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // This script will redirect all 404s to your index.html
+    //   window.location.replace("/");
+    </script>
+    <style>
+      .not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .not-found h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .not-found p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #666;
+  }
+  
+  .home-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #012125;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .home-button:hover {
+    background-color: #0d0f11;
+  }
+    </style>
+      <div className="not-found">
+     <h1>404 - Page Not Found</h1>
+     <p>The page you're looking for doesn't exist.</p>
+     <a href="/" class="home-button"> Home</a>
+    </div>
+  </body>
+</html>

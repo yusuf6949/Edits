@@ -1,0 +1,50 @@
+{
+	"companyName": "NextHomeLabs",
+	"description": "NextHomeLabs is a cutting-edge technology company specializing in smart home solutions.",
+	"founded": 2020,
+	"headquarters": "San Francisco, CA",
+	"employees": 150,
+	"products": [
+	  {
+		"name": "SmartHub",
+		"description": "Central control unit for all smart home devices",
+		"price": 199.99
+	  },
+	  {
+		"name": "SecureConnect",
+		"description": "Advanced home security system with AI-powered monitoring",
+		"price": 299.99
+	  },
+	  {
+		"name": "EcoClimate",
+		"description": "Energy-efficient smart thermostat",
+		"price": 149.99
+	  }
+	],
+	"services": [
+	  {
+		"name": "24/7 Support",
+		"description": "Round-the-clock customer support for all products"
+	  },
+	  {
+		"name": "Professional Installation",
+		"description": "Expert installation of smart home systems"
+	  },
+	  {
+		"name": "Custom Integration",
+		"description": "Tailored solutions for unique smart home setups"
+	  }
+	],
+	"contactInfo": {
+	  "email": "info@nexthomelab.com",
+	  "phone": "+1 (555) 123-4567",
+	  "website": "https://www.nexthomelab.com"
+	},
+	"socialMedia": {
+	  "twitter": "@NextHomeLabs",
+	  "facebook": "NextHomeLabsOfficial",
+	  "linkedin": "nexthome-labs"
+	},
+	"mission": "To revolutionize home living through innovative, user-friendly smart technology solutions.",
+	"vision": "Creating a future where every home is a smart home, enhancing comfort, security, and efficiency for families worldwide."
+  }

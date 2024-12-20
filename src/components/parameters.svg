@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <style>
+    .input-layer, .hidden-layer1, .hidden-layer2, .output-layer { animation: pulse 2s infinite; }
+    .input-layer { animation-delay: 0s; }
+    .hidden-layer1 { animation-delay: 0.5s; }
+    .hidden-layer2 { animation-delay: 1s; }
+    .output-layer { animation-delay: 1.5s; }
+    @keyframes pulse { 0% { fill-opacity: 0.5; } 50% { fill-opacity: 1; } 100% { fill-opacity: 0.5; } }
+    
+    .arrow-end-1 {
+      animation: moveArrowEnd1 8s infinite steps(4, end);
+    }
+    @keyframes moveArrowEnd1 {
+      0%, 24.99% { transform: translateY(0); }
+      25%, 49.99% { transform: translateY(100px); }
+      50%, 74.99% { transform: translateY(200px); }
+      75%, 99.99% { transform: translateY(300px); }
+    }
+    .arrow-end-2 {
+      animation: moveArrowEnd2 6s infinite steps(3, end);
+    }
+    @keyframes moveArrowEnd2 {
+      0%, 33.32% { transform: translateY(0); }
+      33.33%, 66.65% { transform: translateY(100px); }
+      66.66%, 99.99% { transform: translateY(200px); }
+    }
+    .arrow-end-3 {
+      animation: moveArrowEnd3 4s infinite steps(2, end);
+    }
+    @keyframes moveArrowEnd3 {
+      0%, 49.98% { transform: translateY(0); }
+      49.99%, 99.99% { transform: translateY(100px); }
+    }
+    .ai-parameter {
+      animation: changeColor 3s infinite;
+    }
+    @keyframes changeColor {
+      0% { fill: #FF0000; }
+      33% { fill: #00FF00; }
+      66% { fill: #0000FF; }
+      100% { fill: #FF0000; }
+    }
+  </style>
+  
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#999" />
+    </marker>
+  </defs>
+  
+  <g stroke="#999" stroke-width="1">
+    <!-- Input layer to hidden layer 1 -->
+    <line x1="100" y1="50" x2="300" y2="50">
+      <animate attributeName="y2" values="50;50;50;50;150;150;150;150;250;250;250;250;350;350;350;350;50;50;50;50" dur="8s" repeatCount="indefinite" />
+    </line>
+    <line x1="100" y1="100" x2="300" y2="50">
+      <animate attributeName="y2" values="50;50;50;50;150;150;150;150;250;250;250;250;350;350;350;350;50;50;50;50" dur="8s" repeatCount="indefinite" />
+    </line>
+    <line x1="100" y1="150" x2="300" y2="50">
+      <animate attributeName="y2" values="50;50;50;50;150;150;150;150;250;250;250;250;350;350;350;350;50;50;50;50" dur="8s" repeatCount="indefinite" />
+    </line>
+    <line x1="100" y1="200" x2="300" y2="50">
+      <animate attributeName="y2" values="50;50;50;50;150;150;150;150;250;250;250;250;350;350;350;350;50;50;50;50" dur="8s" repeatCount="indefinite" />
+    </line>
+    <line x1="100" y1="250" x2="300" y2="50">
+      <animate attributeName="y2" values="50;50;50;50;150;150;150;150;250;250;250;250;350;350;350;350;50;50;50;50" dur="8s" repeatCount="indefinite" />
+    </line>
+    <line x1="100" y1="300" x2="300" y2="50">
+      <animate attributeName="y2" values="50;50;50;50;150;150;150;150;250;250;250;250;350;350;350;350;50;50;50;50" dur="8s" repeatCount="indefinite" />
+    </line>
+    <line x1="100" y1="350" x2="300" y2="50">
+      <animate attributeName="y2" values="50;50;50;50;150;150;150;150;250;250;250;250;350;350;350;350;50;50;50;50" dur="8s" repeatCount="indefinite" />
+    </line>
+    
+    <!-- Animated arrowheads for first layer -->
+    <g class="arrow-end-1">
+      <use href="#arrowhead" x="300" y="50" />
+      <use href="#arrowhead" x="300" y="50" />
+      <use href="#arrowhead" x="300" y="50" />
+      <use href="#arrowhead" x="300" y="50" />
+      <use href="#arrowhead" x="300" y="50" />
+      <use href="#arrowhead" x="300" y="50" />
+      <use href="#arrowhead" x="300" y="50" />
+    </g>
+
+    <!-- Hidden layer 1 to hidden layer 2 -->
+    <line x1="300" y1="50" x2="500" y2="100">
+      <animate attributeName="y2" values="100;100;100;200;200;200;300;300;300;100;100;100" dur="6s" repeatCount="indefinite" />
+    </line>
+    <line x1="300" y1="150" x2="500" y2="100">
+      <animate attributeName="y2" values="100;100;100;200;200;200;300;300;300;100;100;100" dur="6s" repeatCount="indefinite" />
+    </line>
+    <line x1="300" y1="250" x2="500" y2="100">
+      <animate attributeName="y2" values="100;100;100;200;200;200;300;300;300;100;100;100" dur="6s" repeatCount="indefinite" />
+    </line>
+    <line x1="300" y1="350" x2="500" y2="100">
+      <animate attributeName="y2" values="100;100;100;200;200;200;300;300;300;100;100;100" dur="6s" repeatCount="indefinite" />
+    </line>
+
+    <!-- Animated arrowheads for second layer -->
+    <g class="arrow-end-2">
+      <use href="#arrowhead" x="500" y="100" />
+      <use href="#arrowhead" x="500" y="100" />
+      <use href="#arrowhead" x="500" y="100" />
+    </g>
+
+    <!-- Hidden layer 2 to output layer -->
+    <line x1="500" y1="100" x2="700" y2="150">
+      <animate attributeName="y2" values="150;150;250;250;150;150" dur="4s" repeatCount="indefinite" />
+    </line>
+    <line x1="500" y1="200" x2="700" y2="150">
+      <animate attributeName="y2" values="150;150;250;250;150;150" dur="4s" repeatCount="indefinite" />
+    </line>
+    <line x1="500" y1="300" x2="700" y2="150">
+      <animate attributeName="y2" values="150;150;250;250;150;150" dur="4s" repeatCount="indefinite" />
+    </line>
+
+    <!-- Animated arrowheads for output layer -->
+    <g class="arrow-end-3">
+      <use href="#arrowhead" x="700" y="150" />
+      <use href="#arrowhead" x="700" y="150" />
+      <use href="#arrowhead" x="700" y="150" />
+    </g>
+
+    <!-- Modified AI Parameter connections -->
+    <line x1="700" y1="150" x2="750" y2="200" stroke="#999" stroke-width="1" marker-end="url(#arrowhead)" />
+    <line x1="700" y1="250" x2="750" y2="200" stroke="#999" stroke-width="1" marker-end="url(#arrowhead)" />
+  </g>
+
+  <!-- Input layer -->
+  <g class="input-layer" fill="#40E0D0">
+    <circle cx="100" cy="50" r="20" />
+    <circle cx="100" cy="100" r="20" />
+    <circle cx="100" cy="150" r="20" />
+    <circle cx="100" cy="200" r="20" />
+    <circle cx="100" cy="250" r="20" />
+    <circle cx="100" cy="300" r="20" />
+    <circle cx="100" cy="350" r="20" />
+  </g>
+
+  <!-- Hidden layer 1 -->
+  <g class="hidden-layer1" fill="#FF69B4">
+    <circle cx="300" cy="50" r="20" />
+    <circle cx="300" cy="150" r="20" />
+    <circle cx="300" cy="250" r="20" />
+    <circle cx="300" cy="350" r="20" />
+  </g>
+
+  <!-- Hidden layer 2 -->
+  <g class="hidden-layer2" fill="#1E90FF">
+    <circle cx="500" cy="100" r="20" />
+    <circle cx="500" cy="200" r="20" />
+    <circle cx="500" cy="300" r="20" />
+  </g>
+
+  <!-- Output layer -->
+  <g class="output-layer" fill="#FFD700">
+    <circle cx="700" cy="150" r="20" />
+    <circle cx="700" cy="250" r="20" />
+  </g>
+
+  <!-- AI Parameter -->
+  <circle class="ai-parameter" cx="750" cy="200" r="20" />
+</svg>

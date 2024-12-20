@@ -1,0 +1,197 @@
+/* General styles */
+.cd-bg-gray-100 { background-color: #f3f4f6; }
+.cd-bg-white { background-color: white; }
+.cd-text-gray-600 { color: #4b5563; }
+.cd-text-teal-600 { color: #0d9488; }
+.cd-text-white { color: white; }
+.cd-text-black { color: black; }
+
+/* Dark mode styles */
+.cd-dark .cd-bg-gray-100 { background-color: #111827; }
+.cd-dark .cd-bg-white { background-color: #1f2937; }
+.cd-dark .cd-text-gray-600 { color: #d1d5db; }
+.cd-dark .cd-text-black { color: white; }
+
+/* Layout */
+.cd-flex { display: flex; }
+.cd-flex-1 { flex: 1 1 0%; }
+.cd-flex-col { flex-direction: column; }
+.cd-items-center { align-items: center; }
+.cd-justify-between { justify-content: space-between; }
+.cd-justify-center { justify-content: center; }
+.cd-justify-end { justify-content: flex-end; }
+
+/* Sizing and spacing */
+.cd-w-64 { width: 16rem; }
+.cd-w-1\/2 { width: 50%; }
+.cd-h-screen { height: 100vh; }
+.cd-max-w-3\/4 { max-width: 75%; }
+.cd-p-2 { padding: 0.5rem; }
+.cd-p-3 { padding: 0.75rem; }
+.cd-p-4 { padding: 1rem; }
+.cd-p-8 { padding: 2rem; }
+.cd-px-4 { padding-left: 1rem; padding-right: 1rem; }
+.cd-py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.cd-mb-2 { margin-bottom: 0.5rem; }
+.cd-mb-4 { margin-bottom: 1rem; }
+.cd-mb-6 { margin-bottom: 1.5rem; }
+.cd-mb-8 { margin-bottom: 2rem; }
+.cd-mt-2 { margin-top: 0.5rem; }
+.cd-mt-4 { margin-top: 1rem; }
+.cd-mr-2 { margin-right: 0.5rem; }
+.cd-mr-4 { margin-right: 1rem; }
+.cd-ml-4 { margin-left: 1rem; }
+.cd-m-4 { margin: 1rem; }
+
+
+.cd-text-2xl { font-size: 1.5rem; }
+.cd-text-xl { font-size: 1.25rem; }
+.cd-font-bold { font-weight: 700; }
+.cd-text-sm { font-size: 0.875rem; }
+
+
+.cd-rounded { border-radius: 0.25rem; }
+.cd-rounded-lg { border-radius: 0.5rem; }
+.cd-rounded-full { border-radius: 9999px; }
+.cd-rounded-l { border-top-left-radius: 0.25rem; border-bottom-left-radius: 0.25rem; }
+.cd-rounded-r { border-top-right-radius: 0.25rem; border-bottom-right-radius: 0.25rem; }
+.cd-shadow { box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); }
+.cd-shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+
+
+.cd-hover\:bg-gray-100:hover { background-color: #f3f4f6; }
+.cd-dark .cd-hover\:bg-gray-100:hover { background-color: #374151; }
+.cd-hover\:bg-blue-600:hover { background-color: #2563eb; }
+
+
+.cd-bg-blue-500 { background-color: #3b82f6; }
+.cd-bg-gray-200 { background-color: #e5e7eb; }
+.cd-bg-gray-800 { background-color: #1f2937; }
+.cd-bg-red-500 { background-color: #ef4444; }
+
+
+.cd-input {
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+}
+
+.cd-dark .cd-input {
+  background-color: #374151;
+  border-color: #4b5563;
+  color: white;
+}
+
+
+.cd-overflow-auto { overflow: auto; }
+.cd-overflow-y-auto { overflow-y: auto; }
+.cd-overflow-hidden { overflow: hidden; }
+
+
+.cd-absolute { position: absolute; }
+.cd-bottom-4 { bottom: 1rem; }
+.cd-left-4 { left: 1rem; }
+
+
+.cd-block { display: block; }
+.cd-inline { display: inline; }
+
+.cd-flex-grow { flex-grow: 1; }
+
+.cd-border { border-width: 1px; }
+.cd-border-gray-300 { border-color: #d1d5db; }
+
+.cd-dark .cd-border-gray-600 { border-color: #4b5563; }
+
+.cd-bg-gray-700 { background-color: #374151; }
+
+.cd-dark .cd-bg-gray-600 { background-color: #4b5563; }
+.cd-dark .cd-bg-gray-700 { background-color: #374151; }
+
+.cd-hover\:bg-red-600:hover { background-color: #dc2626; }
+
+.cd-chat-message-user {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.cd-chat-message-ai {
+  background-color: #e5e7eb;
+  color: black;
+}
+
+.cd-dark .cd-chat-message-ai {
+  background-color: #4b5563;
+  color: white;
+}
+
+.watchlist-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.watchlist-content {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.watchlist-logo {
+  width: 200px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.watchlist-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.watchlist-message {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+.watchlist-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.watchlist-button:hover {
+  background-color: #2980b9;
+}
+
+.cd-dark .watchlist-content {
+  background-color: #1a202c;
+}
+
+.cd-dark .watchlist-title {
+  color: #e2e8f0;
+}
+
+.cd-dark .watchlist-message {
+  color: #a0aec0;
+}

@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="sectorGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#31b7d8" />
+      <stop offset="100%" style="stop-color:#004261" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#31b7d8" />
+    </marker>
+  </defs>
+  
+  <style>
+    .sector { fill: url(#sectorGradient); stroke: #31b7d8; stroke-width: 2; transition: transform 0.3s; }
+    .sector:hover { transform: scale(1.05); }
+    .icon { fill: white; }
+    .label { font-family: 'Arial', sans-serif; font-size: 14px; fill: white; text-anchor: middle; }
+    .sublabel { font-family: 'Arial', sans-serif; font-size: 10px; fill: #ecd608; text-anchor: middle; }
+    .connection { stroke: #31b7d8; stroke-width: 1.5; fill: none; }
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes moveArrow {
+      0% { offset-distance: 0%; }
+      100% { offset-distance: 100%; }
+    }
+    .fade-in { animation: fadeIn 1s ease-out; }
+    .rotate { animation: rotate 60s infinite linear; }
+    .arrow { fill: #31b7d8; animation: moveArrow 5s infinite linear; }
+  </style>
+
+  <!-- Central Hub -->
+  <g class="fade-in">
+    <circle cx="400" cy="400" r="100" fill="url(#sectorGradient)" stroke="#31b7d8" stroke-width="4" filter="url(#glow)"/>
+  </g>
+
+  <!-- Rotating Outer Circle -->
+  <g class="rotate">
+    <circle cx="400" cy="400" r="300" fill="none" stroke="#31b7d8" stroke-width="1" stroke-dasharray="5 3" opacity="0.5"/>
+  </g>
+
+  <!-- Sectors -->
+  <g id="agriculture" transform="translate(200, 200)" class="fade-in">
+    <circle class="sector" r="60" filter="url(#glow)" />
+    <path class="icon" d="M-20,-10 q20,25 20,50 M20,-10 q-20,25 -20,50 M-30,15 q30,-30 60,0" transform="translate(0, -15)"/>
+    <text y="40" class="label">Agriculture</text>
+  </g>
+
+  <g id="healthcare" transform="translate(400, 150)" class="fade-in">
+    <circle class="sector" r="60" filter="url(#glow)" />
+    <path class="icon" d="M-20,0 h40 M0,-20 v40" stroke-width="8" stroke="white" transform="translate(0, -15)"/>
+    <text y="40" class="label">Healthcare</text>
+    <text y="55" class="sublabel">BioAI</text>
+  </g>
+
+  <g id="manufacturing" transform="translate(600, 200)" class="fade-in">
+    <circle class="sector" r="60" filter="url(#glow)" />
+    <path class="icon" d="M-20,-15 h15 l5,30 l5,-30 h15 v35 h-40 z" transform="translate(0, -15)"/>
+    <text y="40" class="label">Manufacturing</text>
+  </g>
+
+  <g id="retail" transform="translate(150, 400)" class="fade-in">
+    <circle class="sector" r="60" filter="url(#glow)" />
+    <path class="icon" d="M-25,-15 h50 v30 h-50 z M-20,-15 v-10 h40 v10 M-15,15 v10 M0,15 v10 M15,15 v10" transform="translate(0, -15)"/>
+    <text y="40" class="label">Retail</text>
+  </g>
+
+  <g id="education" transform="translate(650, 400)" class="fade-in">
+    <circle class="sector" r="60" filter="url(#glow)" />
+    <path class="icon" d="M-20,5 l20,-20 l20,20 M-13,10 h26 v-10 h-26 z" transform="translate(0, -15)"/>
+    <text y="40" class="label">Education</text>
+  </g>
+
+  <g id="transportation" transform="translate(200, 600)" class="fade-in">
+    <circle class="sector" r="60" filter="url(#glow)" />
+    <path class="icon" d="M-25,-10 h50 v25 h-50 z M-20,15 a5,5 0 0 0 10,0 M10,15 a5,5 0 0 0 10,0 M-25,-5 h10 M-25,0 h10 M15,-5 h10 M15,0 h10" transform="translate(0, -15)"/>
+    <text y="40" class="label">Transportation</text>
+  </g>
+
+  <g id="energy" transform="translate(400, 650)" class="fade-in">
+    <circle class="sector" r="60" filter="url(#glow)" />
+    <path class="icon" d="M0,-20 l-10,20 h8 l-8,20 l24,-24 h-14 l10,-16 z" transform="translate(0, -15)"/>
+    <text y="40" class="label">Energy</text>
+  </g>
+
+  <g id="finance" transform="translate(600, 600)" class="fade-in">
+    <circle class="sector" r="60" filter="url(#glow)" />
+    <path class="icon" d="M-20,-20 h40 v40 h-40 z M-13,7 h26 M-13,13 h26 M-7,-13 v26" transform="translate(0, -15)"/>
+    <text y="40" class="label">Finance</text>
+  </g>
+
+  <!-- Connections with Animated Arrows -->
+  <g class="fade-in">
+    <path class="connection" d="M400,400 Q300,300 240,240" id="path1" />
+    <path class="arrow" d="M-5,-5 L5,0 L-5,5 Z" style="offset-path: path('M400,400 Q300,300 240,240');" />
+    
+    <path class="connection" d="M400,400 Q400,275 400,210" id="path2" />
+    <path class="arrow" d="M-5,-5 L5,0 L-5,5 Z" style="offset-path: path('M400,400 Q400,275 400,210');" />
+    
+    <path class="connection" d="M400,400 Q500,300 560,240" id="path3" />
+    <path class="arrow" d="M-5,-5 L5,0 L-5,5 Z" style="offset-path: path('M400,400 Q500,300 560,240');" />
+    
+    <path class="connection" d="M400,400 Q275,400 210,400" id="path4" />
+    <path class="arrow" d="M-5,-5 L5,0 L-5,5 Z" style="offset-path: path('M400,400 Q275,400 210,400');" />
+    
+    <path class="connection" d="M400,400 Q525,400 590,400" id="path5" />
+    <path class="arrow" d="M-5,-5 L5,0 L-5,5 Z" style="offset-path: path('M400,400 Q525,400 590,400');" />
+    
+    <path class="connection" d="M400,400 Q300,500 240,560" id="path6" />
+    <path class="arrow" d="M-5,-5 L5,0 L-5,5 Z" style="offset-path: path('M400,400 Q300,500 240,560');" />
+    
+    <path class="connection" d="M400,400 Q400,525 400,590" id="path7" />
+    <path class="arrow" d="M-5,-5 L5,0 L-5,5 Z" style="offset-path: path('M400,400 Q400,525 400,590');" />
+    
+    <path class="connection" d="M400,400 Q500,500 560,560" id="path8" />
+    <path class="arrow" d="M-5,-5 L5,0 L-5,5 Z" style="offset-path: path('M400,400 Q500,500 560,560');" />
+  </g>
+
+  <!-- Overlay Text -->
+  <g class="fade-in">
+    <text x="400" y="390" class="label" font-size="36" filter="url(#glow)" text-anchor="middle" font-weight="bold">NextHome</text>
+    <text x="400" y="430" class="label" font-size="36" filter="url(#glow)" text-anchor="middle" font-weight="bold">Labs</text>
+  </g>
+  <text x="400" y="520" class="label fade-in" font-size="20" filter="url(#glow)">Empowering Innovation</text>
+</svg>

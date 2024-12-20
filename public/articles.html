@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextHomeLabs - Articles</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --text-color: #1f2937;
+            --bg-color: #f9fafb;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #1d4ed8;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .article {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .article-meta {
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background: #e5e7eb;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        .article-link {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .article-link:hover {
+            text-decoration: underline;
+        }
+
+        .article-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .feature-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        footer {
+            background-color: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>NextHomeLabs</h1>
+        <p>Exploring Next Home Labs Solutions</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#articles">Articles</a></li>
+        
+        </ul>
+    </nav>
+
+    <main id="main-content">
+        <article class="article" id="centgpt-launch">
+            <h2><a href="#centgpt-launch" class="article-link">Introducing CentGPT: Your Advanced AI Assistant</a></h2>
+            <div class="article-meta">
+                <span>Published: September 20, 2024</span>
+                <span> • </span>
+                <span>By: NextHomeLabs Team</span>
+            </div>
+            <img src="images/news11.png" alt="CentGPT Interface" class="article-image">
+            <p>We're excited to announce the launch of CentGPT, our advanced AI assistant designed to revolutionize your workflow. CentGPT combines powerful language understanding with advanced visualization capabilities to deliver an unmatched AI experience.</p>
+            <h3>Key Features</h3>
+            <ul class="feature-list">
+                <li><strong>Advanced Diagramming:</strong> Create detailed flowcharts, architecture diagrams, and technical illustrations directly through natural language commands.</li>
+                <li><strong>Code Generation:</strong> Get high-quality, production-ready code snippets with detailed explanations and best practices.</li>
+                <li><strong>Visual Explanations:</strong> Complex concepts are broken down with automatically generated diagrams and visual aids.</li>
+                <li><strong>Interactive Learning:</strong> Engage in dynamic conversations with contextual understanding and follow-up suggestions.</li>
+                <li><strong>Multi-format Output:</strong> Receive responses in various formats including text, diagrams, code, and structured data.</li>
+            </ul>
+            <div class="article-tags">
+                <span class="tag">AI</span>
+                <span class="tag">CentGPT</span>
+                <span class="tag">Launch</span>
+                <span class="tag">Features</span>
+            </div>
+        </article>
+
+        <article class="article" id="centgpt-guide">
+            <h2><a href="#centgpt-guide" class="article-link">Mastering CentGPT: A Comprehensive Guide to Effective Prompting</a></h2>
+            <div class="article-meta">
+                <span>Published: November 1, 2024</span>
+                <span> • </span>
+                <span>By: NextHomeLabs Team</span>
+            </div>
+            <img src="images/news11.png" alt="CentGPT Prompting Guide" class="article-image">
+            <p>Learn how to get the most out of CentGPT with our comprehensive guide to effective prompting strategies and best practices.</p>
+            
+            <h3>Essential Prompting Techniques</h3>
+            <ul class="feature-list">
+                <li><strong>Be Specific:</strong> Instead of "Create a diagram," try "Create a network diagram showing three servers connected to a load balancer with redundant connections."</li>
+                <li><strong>Provide Context:</strong> Include relevant background information and desired outcome in your prompt.</li>
+                <li><strong>Request Iterations:</strong> Don't hesitate to ask for modifications or improvements to generated content.</li>
+            </ul>
+
+            <h3>Visualization Commands</h3>
+            <p>CentGPT excels at creating various types of diagrams. Here are some effective commands:</p>
+            <ul class="feature-list">
+                <li>"Generate a flowchart showing the user authentication process"</li>
+                <li>"Create an architecture diagram for a microservices application"</li>
+                <li>"Draw an entity-relationship diagram for a blog database"</li>
+                <li>"Visualize the CI/CD pipeline workflow"</li>
+            </ul>
+
+            <h3>Tips for Better Results</h3>
+            <ul class="feature-list">
+                <li>Start with a clear objective</li>
+                <li>Break complex requests into smaller steps</li>
+                <li>Use technical terminology when appropriate</li>
+                <li>Specify your preferred output format</li>
+                <li>Ask for explanations alongside diagrams</li>
+            </ul>
+            
+            <div class="article-tags">
+                <span class="tag">Tutorial</span>
+                <span class="tag">CentGPT</span>
+                <span class="tag">Prompting</span>
+                <span class="tag">Guide</span>
+            </div>
+        </article>
+
+     
+
+    
+        <article class="article" id="ai-hr-operations">
+            <h2><a href="#ai-hr-operations" class="article-link">AI in Human Resources and Operations</a></h2>
+            <div class="article-meta">
+                <span>Published: December 7, 2024</span>
+                <span> • </span>
+                <span>By: NextHomeLabs Team</span>
+            </div>
+            <img src="images/news11.png" alt="AI in HR and Operations" class="article-image">
+            <p>Many businesses are leveraging AI to streamline HR processes, supply chain management, and marketing. Our AI solutions can help companies reduce costs and increase efficiency in these operational management areas.</p>
+            
+            <h3>Key Benefits of AI in Operations</h3>
+            <ul class="feature-list">
+                <li><strong>HR Process Automation:</strong> Streamline recruitment, employee onboarding, and performance management</li>
+                <li><strong>Supply Chain Optimization:</strong> Predictive analytics for inventory management and logistics</li>
+                <li><strong>Marketing Insights:</strong> Advanced data analysis for targeted marketing strategies</li>
+            </ul>
+
+            <div class="article-tags">
+                <span class="tag">AI</span>
+                <span class="tag">HR</span>
+                <span class="tag">Operations</span>
+                <span class="tag">Efficiency</span>
+            </div>
+        </article>
+
+        <article class="article" id="centgpt-uganda">
+            <h2><a href="#centgpt-uganda" class="article-link">CentGPT: Uganda's Breakthrough in Local AI Technology</a></h2>
+            <div class="article-meta">
+                <span>Published: December 1, 2024</span>
+                <span> • </span>
+                <span>By: NextHomeLabs Team</span>
+            </div>
+            <img src="images/news22.png" alt="CentGPT in Uganda" class="article-image">
+            <p>Nexthomelabs introduces CentGPT, marking a significant milestone in Uganda's AI landscape. The innovative AI model showcases local technological prowess, offering a tailored solution that addresses regional needs while demonstrating Uganda's growing capabilities in artificial intelligence. This launch highlights the country's potential to become a key player in the African tech innovation ecosystem.</p>
+            
+            <div class="article-tags">
+                <span class="tag">AI</span>
+                <span class="tag">Uganda</span>
+                <span class="tag">Local Technology</span>
+                <span class="tag">Innovation</span>
+            </div>
+        </article>
+
+        <article class="article" id="efficient-ai-models">
+            <h2><a href="#efficient-ai-models" class="article-link">Smaller, More Efficient AI Models</a></h2>
+            <div class="article-meta">
+                <span>Published: December 4, 2024</span>
+                <span> • </span>
+                <span>By: NextHomeLabs Team</span>
+            </div>
+            <img src="/news11.png" alt="Efficient AI Models" class="article-image">
+            <p>There's a growing trend towards developing smaller AI models that can run locally on devices, addressing privacy concerns and reducing reliance on expensive cloud computing.</p>
+            
+            <h3>Advantages of Compact AI Models</h3>
+            <ul class="feature-list">
+                <li><strong>Enhanced Privacy:</strong> Local processing reduces data transmission risks</li>
+                <li><strong>Cost-Effective:</strong> Lower computational requirements and reduced cloud dependency</li>
+                <li><strong>IoT Integration:</strong> Seamless deployment in edge computing environments</li>
+            </ul>
+
+            <div class="article-tags">
+                <span class="tag">AI</span>
+                <span class="tag">Edge Computing</span>
+                <span class="tag">Privacy</span>
+                <span class="tag">Efficiency</span>
+            </div>
+        </article>
+
+        <article class="article" id="ai-environmental-sustainability">
+            <h2><a href="#ai-environmental-sustainability" class="article-link">AI in Environmental Sustainability</a></h2>
+            <div class="article-meta">
+                <span>Published: December 6, 2024</span>
+                <span> • </span>
+                <span>By: NextHomeLabs Team</span>
+            </div>
+            <img src="/k1.png" alt="AI for Environmental Sustainability" class="article-image">
+            <link rel="apple-touch-icon" href="%PUBLIC_URL%/k1.png" />
+
+            <p>AI is emerging as a powerful tool in combating climate change, offering innovative solutions for optimizing energy use, improving waste management, and predicting environmental trends.</p>
+            
+            <h3>AI-Driven Sustainability Strategies</h3>
+            <ul class="feature-list">
+                <li><strong>Energy Optimization:</strong> Predictive models for efficient energy consumption</li>
+                <li><strong>Waste Management:</strong> Advanced analytics for recycling and waste reduction</li>
+                <li><strong>Environmental Forecasting:</strong> Precise predictions of environmental changes</li>
+            </ul>
+
+            <div class="article-tags">
+                <span class="tag">Sustainability</span>
+                <span class="tag">Climate Tech</span>
+                <span class="tag">AI</span>
+                <span class="tag">Environment</span>
+            </div>
+        </article>
+
+        <article class="article" id="ai-creative-industries">
+            <h2><a href="#ai-creative-industries" class="article-link">AI in Creative Industries</a></h2>
+            <div class="article-meta">
+                <span>Published: December 8, 2024</span>
+                <span> • </span>
+                <span>By: NextHomeLabs Team</span>
+            </div>
+            <img src="/news43.webp" alt="AI in Creative Industries" class="article-image">
+            <p>AI is revolutionizing creative fields, offering tools that can generate artwork, compose music, and even write stories, opening up unprecedented possibilities for creativity and artistic expression.</p>
+            
+            <h3>AI's Creative Capabilities</h3>
+            <ul class="feature-list">
+                <li><strong>Artistic Generation:</strong> AI-powered artwork creation</li>
+                <li><strong>Musical Composition:</strong> Algorithmic music generation</li>
+                <li><strong>Content Creation:</strong> AI-assisted storytelling and writing</li>
+            </ul>
+
+            <div class="article-tags">
+                <span class="tag">Creativity</span>
+                <span class="tag">AI Art</span>
+                <span class="tag">Innovation</span>
+                <span class="tag">Content Creation</span>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>© 2024 NextHomeLabs. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showSingleArticle() {
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                const articles = document.querySelectorAll('.article');
+                articles.forEach(article => {
+                    article.style.display = 'none';
+                });
+
+                const selectedArticle = document.getElementById(hash);
+                if (selectedArticle) {
+                    selectedArticle.style.display = 'block';
+                    
+                    if (!document.querySelector('.back-button')) {
+                        const backButton = document.createElement('a');
+                        backButton.href = window.location.pathname;
+                        backButton.className = 'back-button';
+                        backButton.textContent = '← Back to All Articles';
+                        selectedArticle.parentNode.insertBefore(backButton, selectedArticle);
+                    }
+                }
+            } else {
+                const articles = document.querySelectorAll('.article');
+                articles.forEach(article => {
+                    article.style.display = 'block';
+                });
+                
+                const backButton = document.querySelector('.back-button');
+                if (backButton) {
+                    backButton.remove();
+                }
+            }
+        }
+
+        window.addEventListener('hashchange', showSingleArticle);
+        document.addEventListener('DOMContentLoaded', showSingleArticle);
+    </script>
+</body>
+</html>
